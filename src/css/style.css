@@ -141,12 +141,28 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 30rem) {
+  .user {
+    grid-area: 1/1/span 1/span 2;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .user {
+    grid-area: 1/1/span 2/span 1;
+    flex-direction: column;
+  }
+}
 .user .user__info {
   display: flex;
   gap: 2rem;
   align-items: center;
   background: #5747EA;
   z-index: 1;
+}
+@media screen and (min-width: 48rem) {
+  .user .user__info {
+    flex-direction: column;
+  }
 }
 .user .user__info figure {
   min-width: 4rem;
@@ -170,6 +186,13 @@ main {
 .user .user__nav ul {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 48rem) {
+  .user .user__nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
 }
 .user .user__nav .user__stitch {
   position: absolute;

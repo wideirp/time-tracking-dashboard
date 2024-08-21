@@ -1,14 +1,22 @@
 @use 'variables' as *
-  
+@use 'mixins' as *  
+
 .user
   display: flex
   flex-direction: column
+  @include for-screen('tablet')
+    grid-area: 1 / 1 / span 1 / span 2
+  @include for-screen('small')
+    grid-area: 1 / 1 / span 2 / span 1
+    flex-direction: column
   .user__info
     display: flex
     gap: 2rem
     align-items: center
     background: $clr-primary-user
     z-index: 1
+    @include for-screen('small')
+      flex-direction: column
     figure
       min-width: 4rem
       width: clamp(4rem, calc(1rem + 7vw), 5rem)
@@ -28,6 +36,10 @@
     ul
       display: flex
       justify-content: space-between
+      @include for-screen('small')
+        flex-direction: column
+        gap: 0.5rem
+        padding: 0.5rem 0
     .user__stitch
       position: absolute
       width: 100%
