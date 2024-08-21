@@ -1,6 +1,7 @@
+@use 'variables' as *
 @use 'mixins' as *
   
-.wrapper
+main
   display: grid
   grid-template-columns: 1fr
   gap: 2rem
@@ -9,17 +10,19 @@
   @include for-screen('small')
     grid-template-columns: repeat(4, 1fr)
 
+
   // TEMP
-  .user,
-  .activity
-    min-width: 320px
-    min-height: 220px
+  // .user,
+  // .activity
+  //   min-width: 320px
+  //   min-height: 220px
 
-  .user
-    background: green
+  // .user
+  //   background: green
+  //   grid-area: 1 / 1 / span 1 / span 2
 
-  .activity
-    background: red
-    &:nth-child(odd)
-      background: blue
+  // .activity
+  //   background: red
+  //   &:nth-child(odd)
+  //     background: blue
   

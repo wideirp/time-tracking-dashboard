@@ -1,0 +1,37 @@
+@use 'variables' as *
+  
+.user
+  display: flex
+  flex-direction: column
+  .user__info
+    display: flex
+    gap: 2rem
+    align-items: center
+    background: $clr-primary-user
+    z-index: 1
+    figure
+      min-width: 4rem
+      width: clamp(4rem, calc(1rem + 7vw), 5rem)
+      margin: 0
+    div
+      p
+        color: $clr-neutral-200  
+      h1
+        font-size: clamp(1.5rem, calc(1rem + 2vw), 2.5rem)
+  .user__nav
+    position: relative
+    width: 100%
+    background: $clr-neutral-700
+    font-size: 1.1rem
+    padding-top: 1rem
+    padding-bottom: 1rem
+    ul
+      display: flex
+      justify-content: space-between
+    .user__stitch
+      position: absolute
+      width: 100%
+      height: 2rem
+      left: 0
+      top: -1rem
+      background: $clr-neutral-700

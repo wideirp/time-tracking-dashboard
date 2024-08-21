@@ -93,6 +93,7 @@ textarea:not([rows]) {
 
 body {
   background: hsl(226, 43%, 10%);
+  color: white;
   font-family: "Rubik", sans-serif;
   display: flex;
   justify-content: center;
@@ -100,32 +101,81 @@ body {
   margin: 0;
 }
 
-.wrapper {
+h1,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
 @media screen and (min-width: 30rem) {
-  .wrapper {
+  main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 48rem) {
-  .wrapper {
+  main {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.wrapper .user,
-.wrapper .activity {
-  min-width: 320px;
-  min-height: 220px;
+
+.wrapper {
+  padding: 2rem;
+  border-radius: 15px;
 }
-.wrapper .user {
-  background: green;
+
+.user {
+  display: flex;
+  flex-direction: column;
 }
-.wrapper .activity {
-  background: red;
+.user .user__info {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background: #5747EA;
+  z-index: 1;
 }
-.wrapper .activity:nth-child(odd) {
-  background: blue;
+.user .user__info figure {
+  min-width: 4rem;
+  width: clamp(4rem, 1rem + 7vw, 5rem);
+  margin: 0;
+}
+.user .user__info div p {
+  color: hsl(236, 100%, 87%);
+}
+.user .user__info div h1 {
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+}
+.user .user__nav {
+  position: relative;
+  width: 100%;
+  background: hsl(235, 46%, 20%);
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.user .user__nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.user .user__nav .user__stitch {
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  left: 0;
+  top: -1rem;
+  background: hsl(235, 46%, 20%);
 }/*# sourceMappingURL=style.css.map */
