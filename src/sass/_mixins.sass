@@ -1,0 +1,6 @@
+@use 'sass:map'
+@use 'variables' as *
+  
+@mixin for-screen($size)
+  @media screen and (min-width: map.get($display-map, $size))
+    @content

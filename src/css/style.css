@@ -94,4 +94,38 @@ textarea:not([rows]) {
 body {
   background: hsl(226, 43%, 10%);
   font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media screen and (min-width: 30rem) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 48rem) {
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.wrapper .user,
+.wrapper .activity {
+  min-width: 320px;
+  min-height: 220px;
+}
+.wrapper .user {
+  background: green;
+}
+.wrapper .activity {
+  background: red;
+}
+.wrapper .activity:nth-child(odd) {
+  background: blue;
 }/*# sourceMappingURL=style.css.map */

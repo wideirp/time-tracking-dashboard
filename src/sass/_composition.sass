@@ -1,0 +1,25 @@
+@use 'mixins' as *
+  
+.wrapper
+  display: grid
+  grid-template-columns: 1fr
+  gap: 2rem
+  @include for-screen('tablet')
+    grid-template-columns: repeat(2, 1fr)
+  @include for-screen('small')
+    grid-template-columns: repeat(4, 1fr)
+
+  // TEMP
+  .user,
+  .activity
+    min-width: 320px
+    min-height: 220px
+
+  .user
+    background: green
+
+  .activity
+    background: red
+    &:nth-child(odd)
+      background: blue
+  
