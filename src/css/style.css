@@ -204,23 +204,24 @@ main {
 
 .activity {
   position: relative;
+  margin-top: 50px;
 }
 .activity .activity__tab {
   position: absolute;
   width: 100%;
   height: 78px;
-  top: -19.5px;
+  top: -50px;
   z-index: -1;
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
+  border-radius: 15px;
 }
 .activity .activity__tab figure {
   margin: -0.5rem 1rem 0 0;
 }
 .activity .activity__info {
   background: hsl(235, 46%, 20%);
-  margin-top: 19.5px;
   display: grid;
   grid: repeat(2, 1fr)/repeat(2, 1fr);
 }
@@ -258,7 +259,24 @@ main {
 .activity .activity__info .activity__info--ellipsis {
   justify-self: end;
 }
+.activity .activity__info:hover {
+  background: #33397A;
+}
 .activity .work {
   background: hsl(15, 100%, 70%);
-  border-radius: 15px;
+}
+.activity .play {
+  background: hsl(195, 74%, 62%);
+}
+.activity .study {
+  background: hsl(348, 100%, 68%);
+}
+.activity .exercise {
+  background: hsl(145, 58%, 55%);
+}
+.activity .social {
+  background: hsl(264, 64%, 52%);
+}
+.activity .self-care {
+  background: hsl(43, 84%, 65%);
 }/*# sourceMappingURL=style.css.map */

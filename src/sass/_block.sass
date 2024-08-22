@@ -1,5 +1,6 @@
 @use 'variables' as *
 @use 'mixins' as *  
+@use 'sass:color'
 
 .user
   display: flex
@@ -50,21 +51,22 @@
 
 .activity
   position: relative
+  margin-top: $tab-height
   .activity__tab
     position: absolute
     width: 100%
     height: 78px
-    top: $tab-height
+    top: calc($tab-height * -1)
     z-index: -1
     display: flex
     justify-content: flex-end
     overflow: hidden
+    border-radius: 15px
     figure
       margin: -0.5rem 1rem 0 0
     
   .activity__info
     background: $clr-neutral-700
-    margin-top: calc($tab-height * -1)
     display: grid
     grid: repeat(2, 1fr) / repeat(2, 1fr)
     @include for-screen('small')
@@ -88,7 +90,17 @@
         grid-area: 3/1/span 1/span 2
     .activity__info--ellipsis
       justify-self: end      
-
+    &:hover
+      background: $clr-hover
   .work
     background: $clr-primary-work
-    border-radius: 15px
+  .play
+    background: $clr-primary-play
+  .study
+    background: $clr-primary-study
+  .exercise
+    background: $clr-primary-exercise
+  .social
+    background: $clr-primary-social
+  .self-care
+    background: $clr-primary-self-care
