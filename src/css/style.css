@@ -120,12 +120,12 @@ main {
   grid-template-columns: 1fr;
   gap: 2rem;
 }
-@media screen and (min-width: 30rem) {
+@media screen and (min-width: 32rem) {
   main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 53rem) {
   main {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -140,12 +140,12 @@ main {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 30rem) {
+@media screen and (min-width: 32rem) {
   .user {
     grid-area: 1/1/span 1/span 2;
   }
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 53rem) {
   .user {
     grid-area: 1/1/span 2/span 1;
     flex-direction: column;
@@ -158,7 +158,7 @@ main {
   background: #5747EA;
   z-index: 1;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 53rem) {
   .user .user__info {
     flex-direction: column;
   }
@@ -186,7 +186,7 @@ main {
   display: flex;
   justify-content: space-between;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 53rem) {
   .user .user__nav ul {
     flex-direction: column;
     gap: 0.5rem;
@@ -218,13 +218,16 @@ main {
 .activity .activity__tab figure {
   margin: -0.5rem 1rem 0 0;
 }
-.activity .work {
-  background: hsl(15, 100%, 70%);
-  border-radius: 15px;
-}
 .activity .activity__info {
   background: hsl(235, 46%, 20%);
   margin-top: 19.5px;
+  display: grid;
+  grid: repeat(2, 1fr)/repeat(2, 1fr);
+}
+@media screen and (min-width: 53rem) {
+  .activity .activity__info {
+    grid: repeat(3, auto)/repeat(2, 1fr);
+  }
 }
 .activity .activity__info .activity__info--type {
   font-size: 1.2rem;
@@ -233,8 +236,29 @@ main {
 .activity .activity__info .activity__info--time {
   font-size: clamp(2rem, 1rem + 3vw, 3.5rem);
   font-weight: 200;
+  grid-area: 2/1;
+}
+@media screen and (min-width: 53rem) {
+  .activity .activity__info .activity__info--time {
+    grid-area: 2/1/span 1/span 2;
+    margin: 1rem 0;
+  }
 }
 .activity .activity__info .activity__info--last-week {
   font-size: 1rem;
   color: hsl(235, 45%, 61%);
+  grid-area: 2/2;
+  align-self: end;
+}
+@media screen and (min-width: 53rem) {
+  .activity .activity__info .activity__info--last-week {
+    grid-area: 3/1/span 1/span 2;
+  }
+}
+.activity .activity__info .activity__info--ellipsis {
+  justify-self: end;
+}
+.activity .work {
+  background: hsl(15, 100%, 70%);
+  border-radius: 15px;
 }/*# sourceMappingURL=style.css.map */

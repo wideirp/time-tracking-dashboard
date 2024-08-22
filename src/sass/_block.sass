@@ -61,21 +61,34 @@
     overflow: hidden
     figure
       margin: -0.5rem 1rem 0 0
-      
-  .work
-    background: $clr-primary-work
-    border-radius: 15px
+    
   .activity__info
     background: $clr-neutral-700
     margin-top: calc($tab-height * -1)
+    display: grid
+    grid: repeat(2, 1fr) / repeat(2, 1fr)
+    @include for-screen('small')
+      grid: repeat(3, auto) / repeat(2, 1fr)
     .activity__info--type
       font-size: 1.2rem
       font-weight: 500
     .activity__info--time
       font-size: clamp(2rem, calc(1rem + 3vw), 3.5rem)
       font-weight: 200
+      grid-area: 2/1
+      @include for-screen('small')
+        grid-area: 2/1/span 1/span 2
+        margin: 1rem 0
     .activity__info--last-week
       font-size: 1rem
       color: $clr-neutral-400
+      grid-area: 2/2
+      align-self: end
+      @include for-screen('small')
+        grid-area: 3/1/span 1/span 2
+    .activity__info--ellipsis
+      justify-self: end      
 
-
+  .work
+    background: $clr-primary-work
+    border-radius: 15px
