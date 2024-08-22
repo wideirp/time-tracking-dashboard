@@ -47,3 +47,35 @@
       left: 0
       top: -1rem
       background: $clr-neutral-700
+
+.activity
+  position: relative
+  .activity__tab
+    position: absolute
+    width: 100%
+    height: 78px
+    top: $tab-height
+    z-index: -1
+    display: flex
+    justify-content: flex-end
+    overflow: hidden
+    figure
+      margin: -0.5rem 1rem 0 0
+      
+  .work
+    background: $clr-primary-work
+    border-radius: 15px
+  .activity__info
+    background: $clr-neutral-700
+    margin-top: calc($tab-height * -1)
+    .activity__info--type
+      font-size: 1.2rem
+      font-weight: 500
+    .activity__info--time
+      font-size: clamp(2rem, calc(1rem + 3vw), 3.5rem)
+      font-weight: 200
+    .activity__info--last-week
+      font-size: 1rem
+      color: $clr-neutral-400
+
+
