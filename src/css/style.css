@@ -134,11 +134,14 @@ main {
 .wrapper {
   padding: 2rem;
   border-radius: 15px;
+  height: 100%;
 }
 
 .user {
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin-bottom: 5.5rem;
 }
 @media screen and (min-width: 32rem) {
   .user {
@@ -149,6 +152,7 @@ main {
   .user {
     grid-area: 1/1/span 2/span 1;
     flex-direction: column;
+    margin-bottom: 9rem;
   }
 }
 .user .user__info {
@@ -173,18 +177,29 @@ main {
 }
 .user .user__info div h1 {
   font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  font-weight: 400;
 }
 .user .user__nav {
-  position: relative;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
   width: 100%;
-  background: hsl(235, 46%, 20%);
   font-size: 1.1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  background: hsl(235, 46%, 20%);
+  bottom: -3.5rem;
+}
+@media screen and (min-width: 53rem) {
+  .user .user__nav {
+    bottom: -9rem;
+  }
+}
+.user .user__nav.wrapper {
+  padding: 1rem 1.5rem;
 }
 .user .user__nav ul {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 @media screen and (min-width: 53rem) {
   .user .user__nav ul {
@@ -204,13 +219,13 @@ main {
 
 .activity {
   position: relative;
-  margin-top: 50px;
+  margin-top: 3rem;
 }
 .activity .activity__tab {
   position: absolute;
   width: 100%;
   height: 78px;
-  top: -50px;
+  top: -3rem;
   z-index: -1;
   display: flex;
   justify-content: flex-end;

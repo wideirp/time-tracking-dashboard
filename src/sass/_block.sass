@@ -3,19 +3,23 @@
 @use 'sass:color'
 
 .user
+  position: relative
   display: flex
   flex-direction: column
+  margin-bottom: 5.5rem
   @include for-screen('tablet')
     grid-area: 1 / 1 / span 1 / span 2
   @include for-screen('small')
     grid-area: 1 / 1 / span 2 / span 1
     flex-direction: column
+    margin-bottom: 9rem
   .user__info
     display: flex
     gap: 2rem
     align-items: center
     background: $clr-primary-user
     z-index: 1
+    // margin-bottom: $nav-height
     @include for-screen('small')
       flex-direction: column
     figure
@@ -27,16 +31,24 @@
         color: $clr-neutral-200  
       h1
         font-size: clamp(1.5rem, calc(1rem + 2vw), 2.5rem)
+        font-weight: 400
   .user__nav
-    position: relative
+    display: flex
+    align-items: flex-end
+    position: absolute
     width: 100%
-    background: $clr-neutral-700
     font-size: 1.1rem
-    padding-top: 1rem
-    padding-bottom: 1rem
+    background: $clr-neutral-700
+    // height: $nav-height
+    bottom: -3.5rem
+    @include for-screen('small')
+      bottom: -9rem
+    &.wrapper
+      padding: 1rem 1.5rem
     ul
       display: flex
       justify-content: space-between
+      width: 100%
       @include for-screen('small')
         flex-direction: column
         gap: 0.5rem
