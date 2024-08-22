@@ -187,6 +187,7 @@ main {
   position: absolute;
   width: 100%;
   font-size: 1.1rem;
+  color: hsl(235, 45%, 61%);
   background: hsl(235, 46%, 20%);
   bottom: -3.5rem;
 }
@@ -209,6 +210,9 @@ main {
     gap: 0.5rem;
     padding: 0.5rem 0;
   }
+}
+.user .user__nav ul li:hover {
+  color: white;
 }
 .user .user__nav .user__stitch {
   position: absolute;
@@ -296,4 +300,8 @@ main {
 }
 .activity .self-care {
   background: hsl(43, 84%, 65%);
+}
+
+li[data-state=active] {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

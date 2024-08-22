@@ -37,6 +37,7 @@
     position: absolute
     width: 100%
     font-size: 1.1rem
+    color: $clr-neutral-400
     background: $clr-neutral-700
     // height: $nav-height
     bottom: -3.5rem
@@ -51,7 +52,10 @@
       @include for-screen('small')
         flex-direction: column
         gap: 0.5rem
-        padding: 0.5rem 0
+        padding: 0.5rem 0 
+      li:hover
+        color: white
+
     .user__stitch
       position: absolute
       width: 100%
