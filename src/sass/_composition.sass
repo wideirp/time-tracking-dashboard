@@ -2,6 +2,8 @@
 @use 'mixins' as *
   
 main
+  margin: clamp(1rem, calc(1rem + 1vw), 4rem)
+  max-width: 70rem
   display: grid
   grid-template-columns: 1fr
   gap: 2rem

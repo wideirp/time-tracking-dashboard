@@ -116,6 +116,8 @@ a {
 }
 
 main {
+  margin: clamp(1rem, 1rem + 1vw, 4rem);
+  max-width: 70rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -125,7 +127,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (min-width: 53rem) {
+@media screen and (min-width: 59rem) {
   main {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -148,7 +150,7 @@ main {
     grid-area: 1/1/span 1/span 2;
   }
 }
-@media screen and (min-width: 53rem) {
+@media screen and (min-width: 59rem) {
   .user {
     grid-area: 1/1/span 2/span 1;
     flex-direction: column;
@@ -162,7 +164,7 @@ main {
   background: #5747EA;
   z-index: 1;
 }
-@media screen and (min-width: 53rem) {
+@media screen and (min-width: 59rem) {
   .user .user__info {
     flex-direction: column;
   }
@@ -188,7 +190,7 @@ main {
   background: hsl(235, 46%, 20%);
   bottom: -3.5rem;
 }
-@media screen and (min-width: 53rem) {
+@media screen and (min-width: 59rem) {
   .user .user__nav {
     bottom: -9rem;
   }
@@ -201,7 +203,7 @@ main {
   justify-content: space-between;
   width: 100%;
 }
-@media screen and (min-width: 53rem) {
+@media screen and (min-width: 59rem) {
   .user .user__nav ul {
     flex-direction: column;
     gap: 0.5rem;
@@ -240,7 +242,7 @@ main {
   display: grid;
   grid: repeat(2, 1fr)/repeat(2, 1fr);
 }
-@media screen and (min-width: 53rem) {
+@media screen and (min-width: 59rem) {
   .activity .activity__info {
     grid: repeat(3, auto)/repeat(2, 1fr);
   }
@@ -254,7 +256,7 @@ main {
   font-weight: 200;
   grid-area: 2/1;
 }
-@media screen and (min-width: 53rem) {
+@media screen and (min-width: 59rem) {
   .activity .activity__info .activity__info--time {
     grid-area: 2/1/span 1/span 2;
     margin: 1rem 0;
@@ -266,7 +268,7 @@ main {
   grid-area: 2/2;
   align-self: end;
 }
-@media screen and (min-width: 53rem) {
+@media screen and (min-width: 59rem) {
   .activity .activity__info .activity__info--last-week {
     grid-area: 3/1/span 1/span 2;
   }
